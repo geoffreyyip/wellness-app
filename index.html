@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Wellness App</title>
+</head>
+<body>
+
+  <div class="tabs">
+    <button onclick="openTab('breathing')">Practice Deep Breathing</button>
+    <button onclick="openTab('cbt')">Identify Mental Distortions</button>
+    <button onclick="openTab('timer')">Do an Interval Workout</button>
+  </div>
+
+  <div id="timerTab" class="tab-content">
+    <h2>Workout Interval Timer</h2>
+    <form id="timerForm">
+      <label for="breakDuration">Break Duration (seconds):</label>
+      <input type="number" id="breakDuration" min="1" value="30">
+  
+      <label for="workoutDuration">Workout Duration (seconds):</label>
+      <input type="number" id="workoutDuration" min="1" value="30">
+  
+      <button type="button" onclick="startTimer()">Start Timer</button>
+      <button type="button" onclick="stopTimer()">Stop Timer</button>
+    </form>
+  
+    <div id="timerOutput"></div>
+  
+    <!-- Add an audio element for the beep sound -->
+    <audio id="beepSound" src="gong.mp3"></audio>
+    <audio id="beepSound2" src="gong.mp3"></audio>
+  </div>
+
+  <div id="breathingTab" class="tab-content">
+    <h1>focused breathing</h1>
+    <main class="breathing-circle-container">
+        <div class="breathing-circle"></div>
+    </main>
+      <p>breath in through the nose as the circle expands <br>
+          hold, and release through the mouth as it contracts. <br> repeat as needed.</p> 
+  </div>
+
+  <div id="cbtTab" class="tab-content">
+    <h2>Mental Distortions</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Automatic Thought</th>
+          <th>Mental Distortions</th>
+          <th>Rational Thought</th>
+        </tr>
+      </thead>
+      <tbody id="cbtTableBody">
+        <!-- Table rows will be dynamically added here -->
+      </tbody>
+    </table>
+    <button onclick="addCBTRow()">Add Row</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

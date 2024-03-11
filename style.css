@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.tabs {
+  display: flex;
+}
+
+button {
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.tab-content {
+  display: none;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+}
+
+:root {
+  --primary-color: lightsteelblue;
+  --secondary-color: lightpink;
+  --large: 200px;
+  --small: 10px;
+}
+
+
+.breathing-circle-container {
+  width: 100vw;
+  display: grid;
+  overflow: hidden;
+  justify-content: center;
+  align-content: center;  
+}
+
+.breathing-circle {
+  background-color: var(--primary-color);
+  width: var(--small);
+  height: var(--small);
+  border-radius: calc( var(--small) / 2);
+  display: inline-block;
+  animation: breath 12s ease infinite none running
+}
+
+h1,p {
+  color: #6E7B8B;
+  font-family: "Work Sans", Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+@keyframes breath {
+25% {
+  background-color: var(--secondary-color);
+  width: var(--large);
+  height: var(--large);
+  border-radius: calc( var(--large) / 2);
+}   
+}
+
+
+/*  For CBT styling */
+td {
+  padding: 5px
+}
+
+.select-row {
+  margin-bottom: 5px; /* Adjust the margin as needed */
+}
