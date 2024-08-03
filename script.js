@@ -79,9 +79,14 @@ function playBeepSound2() {
 // Cognitive Distortions section
 const mentalDistortionsList = [
   "",
+  "Assuming the Worst",
+  "Fairy Tale Fantasy",
   "All-or-Nothing Thinking",
-  "Catastrophizing",
-  "Discounting the Positive",
+  "Overgeneralizing",
+  "Dwelling on the Negative",
+  "Rejecting the Positive",
+  "Unfavorable Comparisons",
+  "Blaming"
   "Emotional Reasoning",
   "Fallacy of Change",
   "Fallacy of Fairness",
